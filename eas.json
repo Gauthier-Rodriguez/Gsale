@@ -1,20 +1,41 @@
 {
   "build": {
-    "production": {
-      "android": {
-        "image": "latest"
-      },
-      "ios": {
-        "image": "latest"
-      }
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
     },
     "testing": {
+      "distribution": "internal",
+      "ios": {
+        "buildType": "development",
+        "provisioningProfilePath": "./path/to/your/provisioningProfile.mobileprovision",
+        "enterpriseProvisioning": "universal",
+        "autoIncrement": "buildNumber"
+      },
       "android": {
-        "image": "latest"
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug",
+        "withoutCredentials": true
+      }
+    },
+    "production": {
+      "env": {
+        "API_URL": "https://example.com/api"
       },
       "ios": {
-        "image": "latest-testing"
+        "buildType": "release",
+        "autoIncrement": "version"
+      },
+      "android": {
+        "buildType": "app-bundle",
+        "gradleCommand": ":app:bundleRelease"
       }
     }
+  },
+  "submit": {
+    "production": {}
+  },
+  "cli": {
+    "version": ">= 0.34.0"
   }
 }
