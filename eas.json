@@ -19,16 +19,16 @@
       }
     },
     "production": {
-      "env": {
-        "API_URL": "https://example.com/api"
-      },
       "ios": {
-        "buildType": "release",
-        "autoIncrement": "version"
+        "buildType": "app-store",
+        "provisioningProfilePath": "./path/to/your/provisioningProfile.mobileprovision",
+        "enterpriseProvisioning": "universal",
+        "autoIncrement": "buildNumber"
       },
       "android": {
-        "buildType": "app-bundle",
-        "gradleCommand": ":app:bundleRelease"
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease",
+        "withoutCredentials": true
       }
     }
   },
