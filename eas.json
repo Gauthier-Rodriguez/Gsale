@@ -7,6 +7,14 @@
       "ios": {
         "image": "latest"
       }
+    },
+    "testing": {
+      "android": {
+        "image": "latest"
+      },
+      "ios": {
+        "image": "latest"
+      }
     }
   }
 }
