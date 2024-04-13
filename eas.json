@@ -8,7 +8,7 @@
       "distribution": "internal",
       "ios": {
         "enterpriseProvisioning": "universal",
-        "image": "exp-ios",
+        "image": "latest",
         "autoIncrement": "buildNumber"
       },
       "android": {
@@ -19,7 +19,7 @@
     },
     "production": {
       "ios": {
-        "image": "exp-ios",
+        "image": "latest",
         "enterpriseProvisioning": "universal",
         "autoIncrement": "buildNumber"
       },
